@@ -9,7 +9,7 @@ validators = ["address1", "address2", "address3"]  # Replace with actual validat
 blockchain = Blockchain(validators)
 wallet = Wallet()
 # Create a wallet instance and generate keys
-wallet.create_keys()
+#wallet.create_keys()
 
 
 def index(request):
