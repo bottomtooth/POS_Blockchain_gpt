@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% include 'homepage/home_footer.html' %}
+{% load static %}
+{% block metadescription %}
+    Home Page
+{% endblock %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+
+
+<br>
+    <h1 class="my_Lead_title" style="text-align: center">Home</h1>
+    <p>
+        Home Page
+    </p>
+    <br>
+<div class="d-sm-grid gap-2">
+    <button type="button" class="btn btn-lg btn-success"
+            onclick="window.location.href='/newblock';">New Block
+    </button>
+    <br>
+
+    <button type="button" class="btn btn-lg btn-warning "
+            onclick="window.location.href='/newtransaction';">New Transaction
+    </button>
+
+    <br>
+
+    <button type="button" class="btn btn-lg btn-danger"
+            onclick="window.location.href='/wallet';">New AudioBlock
+    </button>
+</div>
+
+
+{% endblock %}

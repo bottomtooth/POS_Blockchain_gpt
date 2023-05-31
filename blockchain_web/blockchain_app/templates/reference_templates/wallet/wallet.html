@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% include 'homepage/home_footer.html' %}
+{% load static %}
+{% block metadescription %}
+    Home Page
+{% endblock %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <button class="button" onclick="window.location.href='/';">Home</button>
+
+    <br>
+    <h1 class="my_Lead_title" style="text-align: center">Wallet</h1>
+    <div class="container" style="border: black; padding: 10px;">
+        <br>
+        <h2 class="my_Lead_title" style="text-align: center">Wallet Address: {{ wallet_address }}</h2>
+        <br>
+        <h2 class="my_Lead_title" style="text-align: center">Wallet Balance: {{ wallet_balance }}</h2>
+        <br>
+        <h2 class="my_Lead_title" style="text-align: center">Wallet Public Key: {{ wallet_public }}</h2>
+        <br>
+
+
+
+    </div>
+
+    <hr>
+    <br>
+    <br>
+    <p>
+
+    </p>
+
+
+
+{% endblock %}

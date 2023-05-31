@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% include 'homepage/home_footer.html' %}
+{% load static %}
+{% block metadescription %}
+    Home Page
+{% endblock %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+
+    <br>
+    <h1 class="my_Lead_title" style="text-align: center">New Block</h1>
+    <br>
+    <p>
+
+
+    </p>
+
+    <button class="btn btn-primary" onclick="window.location.href='/blockchain';">blockchain</button>
+
+    <table class="table table-hover" style="table-layout: fixed" width="100%">
+    <thead>
+    <tr>
+      <th scope="col">Block #</th>
+      <th scope="col">Title</th>
+      <th scope="col">Date</th>
+      <th scope="col">Timestamp</th>
+        <th scope="col">Data</th>
+        <th scope="col">Last Hash</th>
+        <th scope="col">Hash</th>
+        <th scope="col">Transactions</th>
+        <th scope="col">Signature</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="table-primary">
+      <th scope="row">{{ number }} </th>
+      <td style="word-wrap: break-word">{{ title }}</td>
+      <td style="word-wrap: break-word">{{ date }}</td>
+      <td style="word-wrap: break-word">{{ timestamp }}</td>
+      <td style="word-wrap: break-word">{{ data }}</td>
+        <td style="word-wrap: break-word">{{ lasthash }}</td>
+      <td style="word-wrap: break-word">{{ hash }}</td>
+        <td style="word-wrap: break-word">{{ transactions }}</td>
+      <td style="word-wrap: break-word">{{ signature }}</td>
+    </tr>
+    </tbody>
+
+
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    Home Page
+{% endblock %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <br>
+<form>
+    <fieldset>
+        <legend>New Transaction</legend>
+
+        <div class="form-group">
+        <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Title Text">
+        <label for="floatingInput">Title</label>
+        </div>
+        <div class="form-floating">
+        <input type="text" class="form-control" id="floatingPassword" placeholder="Data to be saved forever">
+        <label for="floatingPassword">Data</label>
+        </div>
+        </div>
+        <br>
+
+        <div class="form-group">
+        <label for="exampleSelect1" class="form-label mt-4">Select Transaction Type</label>
+            <div class="input-group mb-3">
+        <select class="form-select hs" id="exampleSelect1">
+            <option>Transfer Coins to another Wallet</option>
+            <option>Receive Coins</option>
+            <option>Send Coins</option>
+            <option>Stake Coins</option>
+        </select>
+            <button class="btn btn-primary" type="button" id="button-addon2">Select</button>
+            <br>
+        </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+
+        </div>
+
+        <div class="form-group">
+        <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        </div>
+    </fieldset>
+</form>
+
+    <button class="btn btn-lg btn-success">Submit Transaction</button>
+
+{% endblock %}
+
+

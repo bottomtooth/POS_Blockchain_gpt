@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    Home Page
+{% endblock %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <br>
+<form>
+    <fieldset>
+        <legend>New Block</legend>
+
+        <div class="form-group">
+        <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Title Text">
+        <label for="floatingInput">Title</label>
+        </div>
+        <div class="form-floating">
+        <input type="text" class="form-control" id="floatingPassword" placeholder="Data to be saved forever">
+        <label for="floatingPassword">Data</label>
+        </div>
+        </div>
+        <br>
+
+        <div class="form-group">
+        <label for="exampleSelect1" class="form-label mt-4">Select Audio File</label>
+            <div class="input-group mb-3">
+                <button class="btn btn-primary" type="button" id="button-addon2">Select</button>
+            <br>
+        </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group mb-3">
+
+        </div>
+
+        <div class="form-group">
+
+        </div>
+        </div>
+    </fieldset>
+</form>
+
+    <button class="btn btn-lg btn-success">Submit Transaction</button>
+
+{% endblock %}
+
+

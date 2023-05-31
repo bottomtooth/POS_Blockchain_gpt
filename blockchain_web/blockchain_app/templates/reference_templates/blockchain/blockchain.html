@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    Home Page
+{% endblock %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+
+    <br>
+    <h1 class="my_Lead_title" style="text-align: center">BlockChain</h1>
+    <br>
+    <p id="blockchain">
+
+
+    <table class="table table-hover table-bordered" style="table-layout: fixed">
+    <thead>
+    <tr>
+      <th scope="col" style="width: 5%" >Block #</th>
+      <th scope="col">Title</th>
+      <th scope="col">Date</th>
+      <th scope="col">Timestamp</th>
+        <th scope="col">Data</th>
+        <th scope="col">Last Hash</th>
+        <th scope="col">Hash</th>
+        <th scope="col">Transactions</th>
+        <th scope="col">Signature</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% for blocks in chain %}
+
+    <tr class="table-primary" id="block_table">
+        <td style="word-wrap: break-word"> {{blocks.blockCount}}</td>
+        <td style="word-wrap: break-word"> {{blocks.title}}</td>
+        <td style="word-wrap: break-word"> {{blocks.date}}</td>
+        <td style="word-wrap: break-word"> {{blocks.timestamp}}</td>
+        <td style="word-wrap: break-word"> {{blocks.data}}</td>
+        <td style="word-wrap: break-word"> {{blocks.lastHash}}</td>
+        <td style="word-wrap: break-word"> {{blocks.hash}}</td>
+        <td style="word-wrap: break-word"> {{blocks.transactions}}</td>
+        <td style="word-wrap: break-word"> {{blocks.signature}}</td>
+    </tr>
+    {% endfor %}
+
+    </tbody>
+
+    <button class="btn btn-primary" onclick="window.location.href='/blockchain/add';">Add Block</button>
+
+<!--<tr class="table-primary" id="block_table">
+        <th scope="row">{{ number }} </th>
+        <td style="word-wrap: break-word">{{ title }}</td>
+        <td style="word-wrap: break-word">{{ date }}</td>
+        <td style="word-wrap: break-word">{{ timestamp }}</td>
+        <td style="word-wrap: break-word">{{ data }}</td>
+        <td style="word-wrap: break-word">{{ lasthash }}</td>
+        <td style="word-wrap: break-word">{{ hash }}</td>
+        <td style="word-wrap: break-word">{{ transactions }}</td>
+        <td style="word-wrap: break-word">{{ signature }}</td>
+    </tr> -->
+
+{% endblock %}
+
+
